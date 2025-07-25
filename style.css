@@ -16,7 +16,9 @@ header, main {
   z-index: 1;
   text-align: center;
 }
-
+header{
+    font-size: 2rem;
+}
 /* Input & button wrapper */
 .converter {
   display: flex;
