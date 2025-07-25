@@ -108,6 +108,25 @@ function translateToEmoji() {
         running: "🏃",
         skiing: "⛷️",
         cycling: "🚴",
+        
+        // 🛐 RELIGION
+        religion: "🛐",
+        om: "🕉️",
+        cross: "✝️",
+        starofdavid: "✡️",
+        crescent: "☪️",
+        wheelofdharma: "☸️",
+        yinandyang: "☯️",
+        peace: "☮️",
+        placeofworship: "🛕",
+        prayer: "🙏",
+        temple: "⛩️",
+        church: "⛪",
+        mosque: "🕌",
+        synagogue: "🕍" ,
+
+
+
 
         // 🍕 FOOD & DRINKS
         pizza: "🍕",
