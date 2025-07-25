@@ -100,7 +100,11 @@ body {
     text-align: center;
     animation: fadeIn 0.4s ease;
 }
-
+#vanta-bg {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
 
 @keyframes gradientBackground {
     0% {

@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text_Emoji_Converter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text_Emoji_Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ensures fog background fills the page */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #vanta-bg {
+      width: 100%;
+      min-height: 100vh;
+    }
+  </style>
 </head>
+
 <body>
+  <div id="vanta-bg">
     <header>
-        <h1>Welcome to the Text Emoji Converter!</h1>
+      <h1>Welcome to the Text Emoji Converter!</h1>
     </header>
 
     <main>
-        <div class="converter">
-            <input type="text" id="input" placeholder="Enter your text here...">
-            <button id="button"><u>Convert</u></button>
-        </div>
+      <div class="converter">
+        <input type="text" id="input" placeholder="Enter your text here..." />
+        <button id="button"><u>Convert</u></button>
+      </div>
 
-        <div class="output-box">
-            <div id="output" class="output-container"></div>
-        </div>
+      <div class="output-box">
+        <div id="output" class="output-container"></div>
+      </div>
     </main>
-    <script src="script.js"></script>
+  </div>
+
+  <!-- Your script -->
+  <script src="script.js"></script>
+
+  <!-- Include Three.js and Vanta Fog -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+
+  <!-- Initialize the Vanta effect -->
+  <script>
+    VANTA.FOG({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      highlightColor: 0xf0e9eb,
+      midtoneColor: 0x1350e8,
+      lowlightColor: 0xf00f5e,
+      baseColor: 0x110707,
+      blurFactor: 0.63
+    });
+  </script>
 </body>
 </html>
