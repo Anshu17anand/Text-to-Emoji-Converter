@@ -1,124 +1,81 @@
-/* Header stays the same */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: sans-serif;
-    scroll-behavior: smooth;
-}
-
-
-header {
-    width: 100%;
-    background-color: #0b1c2c;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1.5rem;
-    font-style: oblique;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(-45deg, #3b2f80, #6a55af, #4fd3c4);
-    background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
-    margin: 0;
-    padding: 0;
-    color: #e0e0e0;
-}
-
-/* Center the input and button as a block */
-.converter {
-    text-align: center;
-    margin-top: 40px;
-    display: flex ;
-    width: 50%;
-}
-
-/* Input tweaks */
-#input {
-    width: 300px;
-    height: 54px;
-    padding-right: 130px;
-    font-size: 16px;
-    background-color: #1a2b3c;
-    color: #e0e0e0;
-    border: 2px solid hsl(180, 3%, 92%);
-    border-radius: 4px;
-}
-
-/* Button tweaks */
-#button {
-    height: 60px;
-    padding: 10px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    background-color: hsl(234, 11%, 64%);
-    color: #12263a;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
-}
-
-#button:hover {
-    background-color: hsl(13, 84%, 66%);
-    transform: scale(1.05);
-}
-
-/* Output display */
-.output-box {
-    width: 400px;
-    max-width: 500px;
-    background-color: rgba(10, 20, 30, 0.4);
-    border-radius: 8px;
-    padding: 15px 20px;
-    margin-top: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50px;
-    backdrop-filter: blur(5px);
-}
-.output-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-size: 1.6rem;
-    color: #ffffff;
-    word-wrap: break-word;
-    flex-wrap: wrap;
-    text-align: center;
-    animation: fadeIn 0.4s ease;
-}
+/* Fog canvas wrapper */
 #vanta-bg {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes gradientBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+/* Keep header visible above Vanta */
+header, main {
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Input & button wrapper */
+.converter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* Input field styling */
+#input {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #1a2b3c;
+  color: #e0e0e0;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Convert button styling */
+#button {
+  height: 44px;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: hsl(234, 11%, 64%);
+  color: #12263a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#button:hover {
+  background-color: hsl(13, 84%, 66%);
+  transform: scale(1.05);
+}
+
+/* Output box with dark translucent background */
+.output-box {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(10, 10, 10, 0.6); /* dark translucent bg */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 90%;
+  color: #ffffff;
+}
+
+/* Output text styles */
+.output-container {
+  font-size: 24px;
+  font-family: 'Segoe UI Emoji', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
