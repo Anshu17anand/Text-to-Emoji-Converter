@@ -21,8 +21,3 @@ A fun web app that converts regular text into emojis using keyword matching.
 2. The app scans each word and replaces known keywords with corresponding emojis.
 3. Output is displayed in a styled container below.
 
-## Future Improvements
-- Add emoji suggestions or autocomplete.
-- Integrate real-time translation via APIs.
-- Allow user-defined emoji mappings.
-
