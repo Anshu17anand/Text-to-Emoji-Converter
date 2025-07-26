@@ -41,13 +41,30 @@
 
   <!-- Your script -->
   <script src="script.js"></script>
+  <script src="p5.min.js"></script>
+  <script src="vanta.trunk.min.js"></script>
+  <script>
+    VANTA.TRUNK({
+      el: "#your-element-selector",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xe30e4b,
+      backgroundColor: 0xd9d9e3,
+      spacing: 10.00,
+      chaos: 5.50
+      })
+  </script>
 
-  <!-- Include Three.js and Vanta Fog -->
+  <!-- Include Three.js and Vanta Fog
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 
-  <!-- Initialize the Vanta effect -->
-  <script>
+  <!-- Initialize the Vanta effect 
     VANTA.FOG({
       el: "#vanta-bg",
       mouseControls: true,
@@ -61,6 +78,8 @@
       baseColor: 0x110707,
       blurFactor: 0.63
     });
-  </script>
+  </script> -->
+
+
 </body>
 </html>
